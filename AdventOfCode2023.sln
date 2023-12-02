@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{01C3AE01-0EF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F7DDC297-AAF7-4FD2-86FE-67532E0D7F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2023.Tests", "tests\AdventOfCode2023.Day1.Tests\AdventOfCode2023.Tests.csproj", "{5FC1D7DD-1B75-45A5-91EF-651E4FBAC606}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2023.Tests", "tests\AdventOfCode2023.Tests\AdventOfCode2023.Tests.csproj", "{5FC1D7DD-1B75-45A5-91EF-651E4FBAC606}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2023", "src\AdventOfCode2023\AdventOfCode2023.csproj", "{27E86F70-8774-4D3C-9D75-76BE3BA0DB3F}"
 EndProject
