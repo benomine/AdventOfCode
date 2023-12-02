@@ -3,6 +3,6 @@
 public interface IDay
 {
     DateTime Date { get;}
-    string SolvePart1(string input);
-    string SolvePart2(string input);
+    (string result, TimeSpan timeTaken) SolvePart1(string input);
+    (string result, TimeSpan timeTaken) SolvePart2(string input);
 }

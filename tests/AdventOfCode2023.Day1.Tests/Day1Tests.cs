@@ -2,7 +2,7 @@ using FluentAssertions;
 
 namespace AdventOfCode2023.Tests;
 
-public class Day1Tests
+public class Day1Tests : IDayTest
 {
     private readonly IDay _sut = new Day1();
     private const string _input 
@@ -25,18 +25,18 @@ public class Day1Tests
           """;
     
     [Fact]
-    public void Parser_Should_Return_Correct_Sum()
+    public void SolvePart1()
     {
-        var sum = _sut.SolvePart1(_input);
+        var (result, _) = _sut.SolvePart1(_input);
         
-        sum.Should().Be("142");
+        result.Should().Be("142");
     }
     
     [Fact]
-    public void Parser_Should_Return_Correct_SecondSum()
+    public void SolvePart2()
     {
-        var secondSum = _sut.SolvePart2(_secondInput);
+        var (result, _) = _sut.SolvePart2(_secondInput);
         
-        secondSum.Should().Be("281");
+        result.Should().Be("281");
     }
 }

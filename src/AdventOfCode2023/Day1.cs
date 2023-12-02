@@ -1,14 +1,14 @@
-﻿using System.Text.RegularExpressions;
-
-namespace AdventOfCode2023;
+﻿namespace AdventOfCode2023;
 
 public partial class Day1 : IDay
 {
-    private readonly static Regex _regex =
-        new(@"(one|two|three|four|five|six|seven|eight|nine|zero|\d)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
+    [GeneratedRegex(@"(one|two|three|four|five|six|seven|eight|nine|zero|\d)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant)]
+    private static partial Regex LeftToRight();
+    [GeneratedRegex(@"(one|two|three|four|five|six|seven|eight|nine|zero|\d)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.RightToLeft | RegexOptions.CultureInvariant)]
+    private static partial Regex RightToLeft();
 
-    private readonly static Regex _secondRegex =
-        new(@"(one|two|three|four|five|six|seven|eight|nine|zero|\d)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.RightToLeft);
+    private readonly static Regex _regex = LeftToRight();
+    private readonly static Regex _secondRegex = RightToLeft();
 
     private readonly static Dictionary<string, int> _digits = new()
     {
@@ -23,7 +23,7 @@ public partial class Day1 : IDay
         { "nine", 9 }
     };
 
-    public DateTime Date => new(2023, 12, 1);
+    public DateTime Date => new(2023, 12, 1, 0, 0, 0, DateTimeKind.Local);
 
     private readonly Func<string, int> _action1 = (line) => {
         var digits = line.Where(char.IsDigit).Select(c => c - '0').ToArray();
@@ -52,26 +52,29 @@ public partial class Day1 : IDay
         return int.Parse(string.Join("", first, last));
     };
 
-    private static IEnumerable<int> GetValues(string input, Func<string, int> action)
+    public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
+        var start = Stopwatch.GetTimestamp();
+        var total = 0;
         using var reader = TextReader.Synchronized(new StringReader(input));
         while (reader.ReadLine() is { } line)
         {
-            yield return action(line);
+            total += _action1(line);
         }
-    }
-    
-    public string SolvePart1(string input)
-    {
-        var digits = GetValues(input, _action1);
 
-        return digits.Sum().ToString();
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 
-    public string SolvePart2(string input)
+    public (string result, TimeSpan timeTaken) SolvePart2(string input)
     {
-        var digits = GetValues(input, _action2);
+        var start = Stopwatch.GetTimestamp();
+        var total = 0;
+        using var reader = TextReader.Synchronized(new StringReader(input));
+        while (reader.ReadLine() is { } line)
+        {
+            total += _action2(line);
+        }
 
-        return digits.Sum().ToString();
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 }

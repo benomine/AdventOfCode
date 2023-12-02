@@ -17,5 +17,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Spectre.Console" Version="0.48.0" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="20231201.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="20231202.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

@@ -21,14 +21,17 @@ var table = new Table
 
 table.AddColumn("Day");
 table.AddColumn("Result 1");
+table.AddColumn("Time Taken 1");
 table.AddColumn("Result 2");
+table.AddColumn("Time Taken 2");
 
 var days = services.BuildServiceProvider().GetServices<IDay>();
 foreach (var day in days.OrderBy(x => x.Date))
 {
     var input = File.ReadAllText(day.Date.ToString("yyyyMMdd") + ".txt");
-
-    table.AddRow(day.Date.ToString("d"), $"[green]{day.SolvePart1(input)}[/]", $"[green]{day.SolvePart2(input)}[/]");
+    var (result1, timeTaken1) = day.SolvePart1(input);
+    var (result2, timeTaken2) = day.SolvePart2(input);
+    table.AddRow(day.Date.ToString("d"), $"[green]{result1}[/]", $"[green]{timeTaken1}[/]", $"[red]{result2}[/]", $"[red]{timeTaken2}[/]");
 }
 
 AnsiConsole.Write(table);
