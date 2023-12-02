@@ -63,7 +63,6 @@ public partial class Day2 : IDay
             }
         }
 
-
         return maxBlue * maxGreen * maxRed;
     };
 

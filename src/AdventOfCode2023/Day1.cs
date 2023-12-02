@@ -26,27 +26,24 @@ public partial class Day1 : IDay
     public DateTime Date => new(2023, 12, 1, 0, 0, 0, DateTimeKind.Local);
 
     private readonly Func<string, int> _action1 = (line) => {
-        var digits = line.Where(char.IsDigit).Select(c => c - '0').ToArray();
-        if (digits.Length == 0)
-        {
-            return 0;
-        }
-        return int.Parse(string.Join("", digits[0], digits[^1]));
+        var digits = line.Where(char.IsDigit).ToArray();
+        
+        return int.Parse(string.Concat("", digits[0], digits[^1]));
     };
 
     private readonly Func<string, int> _action2 = (line) => {
-        var match = _regex.Matches(line).Select(m => m.Value).First();
+        var match = _regex.Matches(line)[0];
 
         var first = match.Length switch {
-            1 => match[0] - '0',
-            _ => _digits[match]
+            1 => match.ValueSpan[0] - '0',
+            _ => _digits[match.Value]
         };
 
-        var secondMatch = _secondRegex.Matches(line).Select(m => m.Value).First();
+        var secondMatch = _secondRegex.Matches(line)[0];
 
         var last = secondMatch.Length switch {
-            1 => secondMatch[0] - '0',
-            _ => _digits[secondMatch]
+            1 => secondMatch.ValueSpan[0] - '0',
+            _ => _digits[secondMatch.Value]
         };
 
         return int.Parse(string.Join("", first, last));
