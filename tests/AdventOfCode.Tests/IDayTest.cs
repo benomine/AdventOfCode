@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2023.Tests;
+﻿namespace AdventOfCode.Tests;
 
 public interface IDayTest
 {

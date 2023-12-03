@@ -1,6 +1,6 @@
-using FluentAssertions;
+using AdventOfCode._2023;
 
-namespace AdventOfCode2023.Tests;
+namespace AdventOfCode.Tests._2023;
 
 public class Day1Tests : IDayTest
 {

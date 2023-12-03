@@ -1,8 +1,8 @@
-﻿namespace AdventOfCode2023;
+﻿namespace AdventOfCode.Tools;
 
 public interface IDay
 {
-    DateTime Date { get;}
+    DateTime Date { get; }
     (string result, TimeSpan timeTaken) SolvePart1(string input);
     (string result, TimeSpan timeTaken) SolvePart2(string input);
 }

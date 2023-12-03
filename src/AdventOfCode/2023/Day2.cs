@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode2023;
+﻿using AdventOfCode.Tools;
+
+namespace AdventOfCode._2023;
 
 public partial class Day2 : IDay
 {
