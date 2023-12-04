@@ -24,20 +24,16 @@ public class Day3Tests : IDayTest
     [Fact]
     public void SolvePart1()
     {
-        var expectedResult = "4361";
-
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be(expectedResult);
+        result.Should().Be(4361);
     }
 
     [Fact]
     public void SolvePart2()
     {
-        var expectedResult = "467835";
-        
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be(expectedResult);
+        result.Should().Be(467835);
     }
 }

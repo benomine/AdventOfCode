@@ -1,6 +1,4 @@
-﻿using AdventOfCode.Tools;
-
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Spectre.Console;
 
@@ -14,7 +12,7 @@ foreach (var rule in rules)
     services.Add(new ServiceDescriptor(typeof(IDay), rule, ServiceLifetime.Transient));
 }
 
-var year = 2023;
+var year = 2015;
 
 var table = TableGenerator.Create(year);
 

@@ -20,7 +20,7 @@ public class Day2Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("8");
+        result.Should().Be(8);
     }
 
     [Fact]
@@ -28,6 +28,6 @@ public class Day2Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("2286");
+        result.Should().Be(2286);
     }
 }

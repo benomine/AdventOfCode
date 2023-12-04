@@ -1,7 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=38b03f68_002D07c2_002D4dd4_002D8189_002D488cb027c9ba/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Parser_Return_All_Digits" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode2023.Day1.Tests.Day1Tests.Parser_Should_Return_Correct_Sum&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode2023.Day1.Tests.Day1Tests.Parser_Should_Return_Correct_Numbers&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode.Tests._2015.Day1Tests.SolvePart1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode.Tests._2015.Day1Tests.SolvePart2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode.Tests._2015.Day2Tests.SolvePart1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::5FC1D7DD-1B75-45A5-91EF-651E4FBAC606::net8.0::AdventOfCode.Tests._2015.Day2Tests.SolvePart2&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

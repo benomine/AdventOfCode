@@ -1,15 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>AdventOfCode._2023</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="2023\20231201.txt" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="2023\20231202.txt" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="2023\20231203.txt" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="2015\20151201.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2015\20151202.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2015\20151203.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2023\20231201.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2023\20231202.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2023\20231203.txt" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
 </Project>
