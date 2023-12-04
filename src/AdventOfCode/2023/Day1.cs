@@ -12,17 +12,18 @@ public partial class Day1 : IDay
     private readonly static Regex _regex = LeftToRight();
     private readonly static Regex _secondRegex = RightToLeft();
 
-    private readonly static Dictionary<string, int> _digits = new()
+    private static int GetInt(string number) => number switch
     {
-        { "one", 1 },
-        { "two", 2 },
-        { "three", 3 },
-        { "four", 4 },
-        { "five", 5 },
-        { "six", 6 },
-        { "seven", 7 },
-        { "eight", 8 },
-        { "nine", 9 }
+        "one" => 1,
+        "two" => 2,
+        "three" => 3,
+        "four" => 4,
+        "five" => 5,
+        "six" => 6,
+        "seven" => 7,
+        "eight" => 8,
+        "nine" => 9,
+        _ => throw new NotSupportedException()
     };
 
     public DateTime Date => new(2023, 12, 1, 0, 0, 0, DateTimeKind.Local);
@@ -38,14 +39,14 @@ public partial class Day1 : IDay
 
         var first = match.Length switch {
             1 => match.ValueSpan[0] - '0',
-            _ => _digits[match.Value]
+            _ => GetInt(match.Value)
         };
 
         var secondMatch = _secondRegex.Matches(line)[0];
 
         var last = secondMatch.Length switch {
             1 => secondMatch.ValueSpan[0] - '0',
-            _ => _digits[secondMatch.Value]
+            _ => GetInt(secondMatch.Value)
         };
 
         return int.Parse(string.Join("", first, last));

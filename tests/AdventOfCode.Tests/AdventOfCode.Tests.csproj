@@ -27,8 +27,4 @@
     <ProjectReference Include="..\..\src\AdventOfCode\AdventOfCode.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="2023\" />
-  </ItemGroup>
-
 </Project>

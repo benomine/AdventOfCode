@@ -10,5 +10,6 @@
   <ItemGroup>
     <None Include="2023\20231201.txt" CopyToOutputDirectory="PreserveNewest" />
     <None Include="2023\20231202.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="2023\20231203.txt" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
