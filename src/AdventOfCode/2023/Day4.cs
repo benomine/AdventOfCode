@@ -36,9 +36,7 @@ public class Day4 : IDay
 
             cards[i]!.Value = wins.Count() switch
             {
-                1 => 1,
-                > 1 and < 3 => 2,
-                > 2 => (int)Math.Pow(2, wins.Count() - 1),
+                > 0 => (int)Math.Pow(2, wins.Count() - 1),
                 _ => 0
             };
 
@@ -72,9 +70,7 @@ public class Day4 : IDay
             var wins = winnings.Where(x => !string.IsNullOrEmpty(x)).Intersect(yours.Where(x => !string.IsNullOrEmpty(x)));
             total += wins.Count() switch
             {
-                1 => 1,
-                > 1 and < 3 => 2,
-                > 2 => (int)Math.Pow(2, wins.Count() - 1),
+                > 0 => (int)Math.Pow(2, wins.Count() - 1),
                 _ => 0
             };
         }
