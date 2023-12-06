@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AdventOfCode._2015;
+﻿namespace AdventOfCode._2015;
 
 public class Day2 : IDay
 {
@@ -20,7 +18,7 @@ public class Day2 : IDay
         }
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart1(string input)
+    public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var total = 0;
@@ -32,10 +30,10 @@ public class Day2 : IDay
             total += cube.Paper;
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart2(string input)
+    public (string result, TimeSpan timeTaken) SolvePart2(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var total = 0;
@@ -47,6 +45,6 @@ public class Day2 : IDay
             total += cube.Ribbon;
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 }

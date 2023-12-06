@@ -66,7 +66,7 @@ public partial class Day2 : IDay
         return maxBlue * maxGreen * maxRed;
     };
 
-    public (int result, TimeSpan timeTaken) SolvePart1(string input)
+    public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
         var start = Stopwatch.GetTimestamp();
         
@@ -77,10 +77,10 @@ public partial class Day2 : IDay
             total += _action1(line);
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart2(string input)
+    public (string result, TimeSpan timeTaken) SolvePart2(string input)
     {
         var start = Stopwatch.GetTimestamp();
         
@@ -91,6 +91,6 @@ public partial class Day2 : IDay
             total += _action2(line);
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 }

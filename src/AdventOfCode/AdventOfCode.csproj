@@ -7,12 +7,7 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-        <None Include="2015\20151201.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2015\20151202.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2015\20151203.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2023\20231201.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2023\20231202.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2023\20231203.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Include="2023\20231204.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2015\*.txt" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="2023\*.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 </Project>

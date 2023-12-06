@@ -14,7 +14,7 @@ public partial class Day3 : IDay
 
     public DateTime Date => new(2023,12,03,0,0,0,DateTimeKind.Local);
 
-    public (int result, TimeSpan timeTaken) SolvePart1(string input)
+    public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var points = new List<Point>();
@@ -44,10 +44,10 @@ public partial class Day3 : IDay
             }
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart2(string input)
+    public (string result, TimeSpan timeTaken) SolvePart2(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var points = new List<Point>();
@@ -95,6 +95,6 @@ public partial class Day3 : IDay
             total += firstValue is not null && secondValue is not null ? int.Parse(firstValue.Value) * int.Parse(secondValue.Value) : 0;
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 }

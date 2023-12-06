@@ -11,15 +11,15 @@ public class Day1Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart1("(())");
 
-        result.Should().Be(0);
+        result.Should().Be("0");
 
         (result, _) = _sut.SolvePart1("(((");
 
-        result.Should().Be(3);
+        result.Should().Be("3");
 
         (result, _) = _sut.SolvePart1("(()(()(");
 
-        result.Should().Be(3);
+        result.Should().Be("3");
     }
 
     [Fact]
@@ -27,10 +27,10 @@ public class Day1Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart2(")");
 
-        result.Should().Be(1);
+        result.Should().Be("1");
 
         (result, _) = _sut.SolvePart2("()())");
 
-        result.Should().Be(5);
+        result.Should().Be("5");
     }
 }

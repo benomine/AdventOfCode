@@ -11,11 +11,11 @@ public class Day2Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart1("2x3x4");
 
-        result.Should().Be(58);
+        result.Should().Be("58");
 
         (result, _) = _sut.SolvePart1("1x1x10");
 
-        result.Should().Be(43);
+        result.Should().Be("43");
     }
 
     [Fact]
@@ -23,10 +23,10 @@ public class Day2Tests : IDayTest
     {
         var (result, _) = _sut.SolvePart2("2x3x4");
 
-        result.Should().Be(34);
+        result.Should().Be("34");
 
         (result, _) = _sut.SolvePart2("1x1x10");
 
-        result.Should().Be(14);
+        result.Should().Be("14");
     }
 }

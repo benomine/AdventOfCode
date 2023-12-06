@@ -12,7 +12,7 @@ public class Day4 : IDay
         public int Wins { get; set; }
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart2(string input)
+    public (string result, TimeSpan timeTaken) SolvePart2(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var total = 0;
@@ -54,10 +54,10 @@ public class Day4 : IDay
 
         total = cards.Sum(c => c.Total);
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 
-    public (int result, TimeSpan timeTaken) SolvePart1(string input)
+    public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
         var start = Stopwatch.GetTimestamp();
         var total = 0;
@@ -75,6 +75,6 @@ public class Day4 : IDay
             };
         }
 
-        return (total, Stopwatch.GetElapsedTime(start));
+        return (total.ToString(), Stopwatch.GetElapsedTime(start));
     }
 }
