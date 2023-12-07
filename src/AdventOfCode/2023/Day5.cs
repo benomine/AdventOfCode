@@ -9,8 +9,11 @@
         {
             private long Max => Source + Range;
 
-            public int CompareTo(Ranges other)
+            public int CompareTo(Ranges? other)
             {
+                if (this == other) return 0;
+                if (other == null) return 1;
+
                 long diff = Source - other.Source;
                 return diff switch
                 {
