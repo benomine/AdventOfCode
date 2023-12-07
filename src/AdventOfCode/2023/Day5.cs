@@ -3,8 +3,31 @@
     public class Day5 : IDay
     {
         public DateTime Date => new(2023, 12, 05, 0, 0, 0, DateTimeKind.Local);
+        public bool IsIgnored => true;
 
-        private record Ranges(long Source, long Target, long Range);
+        private record Ranges(long Source, long Target, long Range) : IComparable<Ranges>
+        {
+            private long Max => Source + Range;
+
+            public int CompareTo(Ranges other)
+            {
+                long diff = Source - other.Source;
+                return diff switch
+                {
+                    > 0 => 1,
+                    0 => 0,
+                    < 0 => -1
+                };
+            }
+
+            public (bool isInRange, long newValue) IsIn(long value)
+            {
+                bool isInRange = value >= Source && value < Max;
+                long newValue = isInRange ? Target + (value - Source) : -1;
+
+                return (isInRange, newValue);
+            }
+        };
 
         private class Almanac
         {
@@ -14,11 +37,12 @@
 
             public long TryGetValue(long value)
             {
-                foreach (var range in _ranges)
+                foreach (var range in _ranges.OrderBy(x => x.Source))
                 {
-                    if (value >= range.Source && value <= range.Source + range.Range)
+                    var result = range.IsIn(value);
+                    if (result.isInRange)
                     {
-                        return range.Target + (value - range.Source);
+                        return result.newValue;
                     }
                 }
 
@@ -29,7 +53,7 @@
         public (string result, TimeSpan timeTaken) SolvePart1(string input)
         {
             var start = Stopwatch.GetTimestamp();
-            var results = new List<long?>();
+            var result = long.MaxValue;
             var lines = input.Split(
                 new[] { Environment.NewLine + Environment.NewLine },
                 StringSplitOptions.RemoveEmptyEntries);
@@ -53,10 +77,10 @@
                 var humidity = temperatureToHumidity.TryGetValue(temperature);
                 var location = humidityToLocation.TryGetValue(humidity);
 
-                results.Add(location);
+                result = Math.Min(location, result);
             }
 
-            return (results.Where(x => x.HasValue).Min(x => x.Value).ToString(), Stopwatch.GetElapsedTime(start));
+            return (result.ToString(), Stopwatch.GetElapsedTime(start));
         }
 
         private static Almanac GetAlmanac(string[] lines)

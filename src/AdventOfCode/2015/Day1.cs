@@ -4,6 +4,8 @@ public class Day1 : IDay
 {
     public DateTime Date => new DateTime(2015, 12, 01, 0, 0, 0, DateTimeKind.Local);
 
+    public bool IsIgnored => false;
+
     public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
         var start = Stopwatch.GetTimestamp();

@@ -3,6 +3,7 @@
 public partial class Day2 : IDay
 {
     public DateTime Date => new(2023, 12, 02, 0, 0, 0, DateTimeKind.Local);
+    public bool IsIgnored => false;
     private const int _maxRed = 12;
     private const int _maxGreen = 13;
     private const int _maxBlue = 14;

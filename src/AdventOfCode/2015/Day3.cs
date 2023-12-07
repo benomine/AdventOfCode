@@ -3,6 +3,7 @@
 public class Day3 : IDay
 {
     public DateTime Date => new DateTime(2015, 12, 03, 0, 0, 0, DateTimeKind.Local);
+    public bool IsIgnored => false;
 
     public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {

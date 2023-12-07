@@ -3,6 +3,7 @@
 public class Day2 : IDay
 {
     public DateTime Date => new DateTime(2015, 12, 02, 0, 0, 0, DateTimeKind.Local);
+    public bool IsIgnored => false;
 
     private readonly record struct Gift(int X, int Y, int Z)
     {

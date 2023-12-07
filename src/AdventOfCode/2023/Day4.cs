@@ -4,6 +4,7 @@ namespace AdventOfCode._2023;
 public class Day4 : IDay
 {
     public DateTime Date => new(2023,12,04,0,0,0,DateTimeKind.Local);
+    public bool IsIgnored => false;
 
     private sealed class Card
     {

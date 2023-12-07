@@ -25,6 +25,7 @@ public partial class Day1 : IDay
     };
 
     public DateTime Date => new(2023, 12, 1, 0, 0, 0, DateTimeKind.Local);
+    public bool IsIgnored => false;
 
     private readonly Func<string, int> _action1 = (line) => {
         var digits = line.Where(char.IsDigit).ToArray();

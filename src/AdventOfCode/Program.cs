@@ -16,7 +16,7 @@ var year = 2023;
 
 var table = TableGenerator.Create(year);
 
-var days = services.BuildServiceProvider().GetServices<IDay>().Where(x => x.Date.Year == year);
+var days = services.BuildServiceProvider().GetServices<IDay>().Where(x => x.Date.Year == year && !x.IsIgnored);
 foreach (var day in days.OrderBy(x => x.Date))
 {
     var input = File.ReadAllText(Path.Combine(year.ToString(), day.Date.ToString("yyyyMMdd") + ".txt"));

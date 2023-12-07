@@ -13,6 +13,7 @@ public partial class Day3 : IDay
     private static readonly Regex _numbersRegex = Numbers();
 
     public DateTime Date => new(2023,12,03,0,0,0,DateTimeKind.Local);
+    public bool IsIgnored => false;
 
     public (string result, TimeSpan timeTaken) SolvePart1(string input)
     {
