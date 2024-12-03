@@ -12,7 +12,7 @@ foreach (var rule in rules)
     services.Add(new ServiceDescriptor(typeof(IDay), rule, ServiceLifetime.Transient));
 }
 
-var year = 2023;
+var year = 2024;
 
 var table = TableGenerator.Create(year);
 
