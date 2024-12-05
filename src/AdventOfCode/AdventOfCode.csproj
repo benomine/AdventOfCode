@@ -9,17 +9,6 @@
     <ItemGroup>
         <None Include="2015\*.txt" CopyToOutputDirectory="PreserveNewest" />
         <None Include="2023\*.txt" CopyToOutputDirectory="PreserveNewest" />
-        <None Update="2023\20231210.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="2024\20241201.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="2024\20241202.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="2024\20241203.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
+        <None Include="2024\*.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 </Project>
