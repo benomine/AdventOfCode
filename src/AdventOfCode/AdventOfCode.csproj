@@ -11,4 +11,7 @@
         <None Include="2023\*.txt" CopyToOutputDirectory="PreserveNewest" />
         <None Include="2024\*.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="OneOf" />
+    </ItemGroup>
 </Project>
