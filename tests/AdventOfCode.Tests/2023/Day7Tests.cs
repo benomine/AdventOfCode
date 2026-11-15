@@ -15,19 +15,19 @@ public class Day7Tests : IDayTest
           QQQJA 483
           """;
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("6440");
+        Assert.Equals(result,"6440");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("5905");  
+        Assert.Equals(result,"5905");  
     }
 }

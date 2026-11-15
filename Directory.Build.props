@@ -1,5 +1,5 @@
 <Project>
-  <ItemGroup>
+  <ItemGroup Condition="'$(MSBuildProjectName)' != 'CoverageReporter.cs'">
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Spectre.Console" />
   </ItemGroup>

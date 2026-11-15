@@ -16,19 +16,19 @@ public class Day4Tests : IDayTest
           Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
           """;
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("13");
+        Assert.Equals(result,"13");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("30");
+        Assert.Equals(result,"30");
     }
 }

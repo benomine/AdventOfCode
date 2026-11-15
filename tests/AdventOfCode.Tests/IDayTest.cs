@@ -2,8 +2,8 @@
 
 public interface IDayTest
 {
-    [Fact]
+    [Test]
     void SolvePart1();
-    [Fact]
+    [Test]
     void SolvePart2();
 }

@@ -15,19 +15,19 @@ public class Day2Tests : IDayTest
         Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
         """;
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("8");
+        Assert.Equals(result,"8");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("2286");
+        Assert.Equals(result,"2286");
     }
 }

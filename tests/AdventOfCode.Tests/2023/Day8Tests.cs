@@ -33,20 +33,20 @@ namespace AdventOfCode.Tests._2023
               XXX = (XXX, XXX)
               """;
 
-        [Fact]
+        [Test]
         public void SolvePart1()
         {
             var (result, _) = _sut.SolvePart1(_input);
 
-            result.Should().Be("2");
+            Assert.Equals(result,"2");
         }
 
-        [Fact]
+        [Test]
         public void SolvePart2()
         {
             var (result, _) = _sut.SolvePart2(_input2);
 
-            result.Should().Be("6");
+            Assert.Equals(result,"6");
         }
     }
 }

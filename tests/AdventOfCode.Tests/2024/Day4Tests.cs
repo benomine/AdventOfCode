@@ -23,20 +23,20 @@ namespace AdventOfCode.Tests._2024
         private const string _result1 = "18";
         private const string _result2 = "9";
         
-        [Fact]
+        [Test]
         public void SolvePart1()
         {
             var (result, _) = _sut.SolvePart1(_input);
             
-            result.Should().Be(_result1);
+            Assert.Equals(result,_result1);
         }
 
-        [Fact]
+        [Test]
         public void SolvePart2()
         {
             var (result, _) = _sut.SolvePart2(_input);
             
-            result.Should().Be(_result2);
+            Assert.Equals(result,_result2);
         }
     }
 }

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" />
+    <ProjectReference Include="..\CoverageReporter.MicrosoftCodeCoverage\CoverageReporter.MicrosoftCodeCoverage.csproj" />
+    <ProjectReference Include="..\CoverageReporter.Html\CoverageReporter.Html.csproj" />
+    <ProjectReference Include="..\CoverageReporter.Markdown\CoverageReporter.Markdown.csproj" />
+  </ItemGroup>
+</Project>

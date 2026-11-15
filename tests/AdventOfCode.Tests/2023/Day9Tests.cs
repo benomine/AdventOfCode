@@ -13,20 +13,20 @@ namespace AdventOfCode.Tests._2023
               10 13 16 21 30 45
               """;
         
-        [Fact]
+        [Test]
         public void SolvePart1()
         {
             var (result, _) = _sut.SolvePart1(_input);
 
-            result.Should().Be("68");
+            Assert.Equals(result,"68");
         }
 
-        [Fact]
+        [Test]
         public void SolvePart2()
         {
             var (result, _) = _sut.SolvePart2(_input);
 
-            result.Should().Be("5");
+            Assert.Equals(result,"5");
         }
     }
 }

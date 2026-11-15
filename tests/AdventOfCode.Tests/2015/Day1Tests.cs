@@ -6,31 +6,31 @@ public class Day1Tests : IDayTest
 {
     private readonly IDay _sut = new Day1();
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1("(())");
 
-        result.Should().Be("0");
+        Assert.Equals(result,"0");
 
         (result, _) = _sut.SolvePart1("(((");
 
-        result.Should().Be("3");
+        Assert.Equals(result,"3");
 
         (result, _) = _sut.SolvePart1("(()(()(");
 
-        result.Should().Be("3");
+        Assert.Equals(result,"3");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(")");
 
-        result.Should().Be("1");
+        Assert.Equals(result,"1");
 
         (result, _) = _sut.SolvePart2("()())");
 
-        result.Should().Be("5");
+        Assert.Equals(result,"5");
     }
 }

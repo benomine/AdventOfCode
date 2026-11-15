@@ -43,19 +43,19 @@ public class Day5Tests : IDayTest
         56 93 4
         """;
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("35");
+        Assert.Equals(result,"35");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("46");        
+        Assert.Equals(result,"46");        
     }
 }

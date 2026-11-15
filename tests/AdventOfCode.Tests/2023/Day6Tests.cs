@@ -12,19 +12,19 @@ public class Day6Tests : IDayTest
         Distance:  9  40  200
         """;
 
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
 
-        result.Should().Be("288");
+        Assert.Equals(result,"288");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_input);
 
-        result.Should().Be("71503");        
+        Assert.Equals(result,"71503");        
     }
 }

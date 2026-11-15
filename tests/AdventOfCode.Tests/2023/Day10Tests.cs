@@ -24,19 +24,19 @@ public class Day10Tests : IDayTest
           LJ...
           """;
     
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_firstInput);
 
-        result.Should().Be("4");
+        Assert.Equals(result,"4");
 
         (result, _) = _sut.SolvePart1(_secondInput);
 
-        result.Should().Be("8");
+        Assert.Equals(result,"8");
     }
 
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         

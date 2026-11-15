@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <Project Path="src/AdventOfCode/AdventOfCode.csproj" />
+    <Project Path="src/CoverageReporter.Core/CoverageReporter.Core.csproj" />
+    <Project Path="src/CoverageReporter.MicrosoftCodeCoverage/CoverageReporter.MicrosoftCodeCoverage.csproj" />
+    <Project Path="src/CoverageReporter.Html/CoverageReporter.Html.csproj" />
+    <Project Path="src/CoverageReporter.Markdown/CoverageReporter.Markdown.csproj" />
+    <Project Path="src/CoverageReporter.Cli/CoverageReporter.Cli.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AdventOfCode.Tests/AdventOfCode.Tests.csproj" />
+    <Project Path="tests/CoverageReporter.Core.Tests/CoverageReporter.Core.Tests.csproj" />
+    <Project Path="tests/CoverageReporter.MicrosoftCodeCoverage.Tests/CoverageReporter.MicrosoftCodeCoverage.Tests.csproj" />
+    <Project Path="tests/CoverageReporter.Html.Tests/CoverageReporter.Html.Tests.csproj" />
+    <Project Path="tests/CoverageReporter.Cli.Tests/CoverageReporter.Cli.Tests.csproj" />
+  </Folder>
+</Solution>

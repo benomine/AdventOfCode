@@ -24,19 +24,19 @@ public class Day1Tests : IDayTest
           7pqrstsixteen
           """;
     
-    [Fact]
+    [Test]
     public void SolvePart1()
     {
         var (result, _) = _sut.SolvePart1(_input);
         
-        result.Should().Be("142");
+        Assert.Equals(result,"142");
     }
     
-    [Fact]
+    [Test]
     public void SolvePart2()
     {
         var (result, _) = _sut.SolvePart2(_secondInput);
         
-        result.Should().Be("281");
+        Assert.Equals(result,"281");
     }
 }
